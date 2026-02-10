@@ -95,9 +95,14 @@ indexPairEtLongueurPaire(['lion','monkey','aardvaark','cat','doge'])
 //6 — Déplacer les zéros à la fin
 
 function deplacerZeros(nombres) {
-   
+    var tabN = nombres.filter(function (n){
+     return n !== 0
+} )
+  var tab0 = nombres.filter(function (n){
+  return n === 0
+});
+  return tabN.concat(tab0)
 }
-
 deplacerZeros([2,0,3,0,40,3,6,0,10,11])
 
 
